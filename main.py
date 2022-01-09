@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 import random
-from Algorithms.colours import *
-from Algorithms.bubbleSort import bubble_sort
+from colours import *
+from Algorithms.bubbleSort import bubbleSort
+from Algorithms.mergeSort import mergeSort
 
 # This Creates the main window
 root = tk.Tk()
@@ -53,9 +54,11 @@ def generateArray():
 # This will sort the array using the selected sorting algorithm
 def sort():
     global array
-    timeTick = 0.5
     if algo_drop.get() == 'Bubble Sort':
-        bubble_sort(array, drawArray, timeTick)
+        bubbleSort(array, drawArray, [LIGHT_GREEN, RED, WHITE])
+    if algo_drop.get() == 'Merge Sort':
+        mergeSort(array, drawArray, [LIGHT_GREEN, RED, WHITE], 0.02)
+
 
 
 
