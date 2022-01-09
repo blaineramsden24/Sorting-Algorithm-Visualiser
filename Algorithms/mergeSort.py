@@ -1,5 +1,6 @@
 import time
 
+
 def mergeSort(arr, drawArray, colours, delay):
     if len(arr) > 1:
 
